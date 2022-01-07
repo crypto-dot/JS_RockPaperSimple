@@ -3,68 +3,34 @@
     <head>
         <title> Javascript Rock Paper Scissors</title>
         <meta charset= "UTF-8">
-
+        <link rel= "stylesheet"  href= "style.css">
+        <script src="js-file.js" defer></script>
     </head>
     <body>
-        <script>
-            const choices = ["ROCK","PAPER","SCISSORS"];      
-            game();              
-            function game(){
-
-                for(let i = 0; i < 5; i++){
-                    let userInput = userPlay();
-                    let computerInput = computerPlay();
-                    console.log(playRound(userInput,computerInput));
-                }
-
-        }
-        function playRound(input, computerSelection){
-                let pselection = input.toUpperCase();
-
-                if(pselection === computerSelection) {
-                    return "You TIED!";
-                }
-                if(pselection === "ROCK") {
-                    if(computerSelection === "PAPER"){
-                        return "YOU LOSE";
-                    }
-                    return "YOU WIN";
-                }
-                if(pselection === "PAPER") {
-                    if(computerSelection === "SCISSORS"){
-                        return "YOU LOSE";
-                    }
-                    return "YOU WIN";
-                }
-                if(pselection === "SCISSORS") {
-                    if(computerSelection === "ROCK"){
-                        return "YOU LOSE";
-                    }
-                    return "YOU WIN";
-                }
-                return "Invalid Player Choice!";
-            
-            }
-            function userPlay(){
-                let validInput = false;
-                let input;
-                while(!validInput){
-                    input = prompt("Rock,Paper, or Scissors? ");
-                    if(input == null) {
-                        continue;
-                    }
-                    input = input.trim();
-                    input = input.toUpperCase();
-                    if(input === choices[0] || input === choices[1] || input === choices[2]){
-                        validInput = true;
-                    }
-            }
-            return input;
-            }
-
-            function computerPlay() {
-                 return choices[Math.floor(choices.length * Math.random())];
-            }
-        </script>
+        <h1>Rock Paper Scissors!</h1>
+        <h2>Computer</h2>
+        <div class= "container">
+            <div data-choice="rock"><img src = "images/rock.jpg"></div>
+            <div data-choice= "paper"><img src = "images/paper.jpg"></div>
+            <div data-choice="scissors"><img src = "images/scissors.jpg"></div>
+        </div>
+        <div class = "scoreboard-container">
+            <div class= "scoreboard">Good Luck! (Best 3 out of 5)</div>
+                <div class = "counter" > 
+                <div class= "divider"> </div> 
+                <div class= "divider"> </div>
+                <div class= "divider">  </div>
+                <div class= "divider"> </div>
+                 </div>
+        </div>
+        </div>
+        </div>
+        <br>   
+        <h2>You</h2>
+        <div class= "choices">
+            <div data-choice="rock"><img src= "images/rock.jpg"></div>
+            <div data-choice="paper"><img src="images/paper.jpg"></div>
+            <div data-choice="scissors"><img src="images/scissors.jpg"></div>
+        </div>
     </body>
 </html>
