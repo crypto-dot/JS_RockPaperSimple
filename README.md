@@ -1,4 +1,4 @@
 # JS_RockPaperSimple
-Simple Rock Paper Scissors in JS, main goal was to practice manipulating DOM elements with JS.
+Simple Rock Paper Scissors in JS.
 
-# LIVE PREVIEW 👈
+# LIVE PREVIEW https://crypto-dot.github.io/JS_RockPaperSimple/ 👈
