@@ -63,5 +63,6 @@ img, .highlighted{
     box-shadow: 0 0 20px rgba(255, 217, 45, 0.933);
 }
 .choices div {
+    cursor: pointer;
     transition: transform 2s;
 }
